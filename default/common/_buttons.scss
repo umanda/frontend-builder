@@ -1,0 +1,65 @@
+button{
+	outline: none;
+	text-transform: uppercase;
+	font-family: $font-family-linotte-bold;
+	color: $white-color;
+	border-radius: 2px;
+	padding:0 18px;
+	border:none;
+
+	&:hover,
+	&:focus{
+		background-color: $dark-color;
+	}
+}
+
+.primary-btn{
+	outline: none;
+	height: 40px;
+	@include background-gradient($btn-start-color,$btn-end-color);
+
+	&:hover,
+	&:focus{
+		@include background-gradient($btn-end-color,$btn-start-color);
+	}
+}
+
+.dark-primary-btn{
+	outline: none;
+	height: 40px;
+	@include background-gradient($btn-start-dark-color,$btn-end-dark-color);
+
+	&:hover,
+	&:focus{
+		@include background-gradient($btn-end-dark-color,$btn-start-dark-color);
+	}
+}
+
+.logout{
+	a{
+		outline: none;
+		&.primary-btn{
+			width: 100%;
+			color: $white-color;
+			font-family: $font-family-linotte-bold;
+			font-size: 12px;
+			border-radius:2px;
+			height: 40px;
+			padding: 10px 18px;
+			border: none;
+			display: inline-block;
+			text-transform: uppercase;
+			text-decoration: none;
+
+
+			@include background-gradient($btn-start-color,$btn-end-color);
+
+			&:hover,
+			&:focus{
+				@include background-gradient($btn-end-color,$btn-start-color);
+			}
+		}
+	}
+}
+
+

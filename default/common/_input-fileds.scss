@@ -1,0 +1,40 @@
+input{
+  &:hover,
+  &:focus{
+    box-shadow: none;
+  }
+}
+
+////////  Remove the 'Clear' cross hair from text box
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+
+.form-control{
+  float: left;
+  width: auto;
+  border-radius: 2px;
+  font-family: $font-family-linotte-regular;
+  font-size: 14px;
+  height: 40px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5) inset;
+
+  &:hover{
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5) inset;
+  }
+  &:focus{
+    box-shadow: none;
+
+  }
+}
+
+@media (max-width: 767px) {
+  .form-control{
+    width: 100%;
+    &.search{
+      margin: 15px 0 10px 0;
+    }
+
+  }
+}
+
